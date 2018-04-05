@@ -17,7 +17,4 @@ abstract class BaseViewHolder<T, L : BaseListener> : RecyclerView.ViewHolder {
 
     abstract fun onBind(item: T)
 
-    fun onBind(item: T, payloads: List<String>) {
-        onBind(item)
-    }
 }
