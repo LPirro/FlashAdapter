@@ -52,6 +52,29 @@ class FlashSampleAdapter(context: Context, listener: OnRecyclerItemClickListener
 }
 ```
 
-
 ### and you're done!
 
+#### 3. FlashAdapter in Action, just like another RecyclerView adapter.
+
+```
+class MainActivity : AppCompatActivity(), OnRecyclerItemClickListener {
+    
+    private lateinit var adapter: FlashSampleAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        adapter = FlashSampleAdapter(this, this)
+
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        adapter.setItems(generateMockUsers())
+    }
+
+    override fun onItemClick(position: Int) {
+        val name = adapter.getItem(position).name
+        Toast.makeText(this, "Clicked: $name", Toast.LENGTH_LONG).show()
+    }
+    ```
