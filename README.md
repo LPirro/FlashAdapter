@@ -77,4 +77,4 @@ class MainActivity : AppCompatActivity(), OnRecyclerItemClickListener {
         val name = adapter.getItem(position).name
         Toast.makeText(this, "Clicked: $name", Toast.LENGTH_LONG).show()
     }
-    ```
+    
