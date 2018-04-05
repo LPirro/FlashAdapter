@@ -21,6 +21,7 @@ Flash Adapter allows you to create RecyclerViews Adapters quickly and easily, si
 # Usage
 #### 1. Create the ViewHolder class
 
+```
 class UserViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : BaseViewHolder<User, OnRecyclerItemClickListener>(itemView, listener) {
 
     private var tvUserName: TextView? = null
@@ -37,8 +38,9 @@ class UserViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : B
         tvUserName?.text = item.name
     }
 }
+```
 
-#### 1. Create the adapter
+#### 2. Create the adapter
 
 ```
 class FlashSampleAdapter(context: Context, listener: OnRecyclerItemClickListener) :
