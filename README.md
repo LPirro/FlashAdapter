@@ -40,6 +40,7 @@ class UserViewHolder(itemView: View, listener: OnRecyclerItemClickListener?) : B
 
 #### 1. Create the adapter
 
+```
 class FlashSampleAdapter(context: Context, listener: OnRecyclerItemClickListener) :
         FlashAdapter<User, OnRecyclerItemClickListener, UserViewHolder>(context, listener) {
 
@@ -47,6 +48,8 @@ class FlashSampleAdapter(context: Context, listener: OnRecyclerItemClickListener
         return UserViewHolder(inflate(R.layout.view_user, parent), getListener())
     }
 }
+```
+
 
 ### and you're done!
 
