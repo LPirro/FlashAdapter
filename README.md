@@ -15,7 +15,7 @@ Flash Adapter allows you to create RecyclerViews Adapters quickly and easily, si
 #### 2. Add the dependency to your app build.gradle file
 
 	dependencies {
-	        implementation 'com.github.LPirro:FlashAdapter:v0.0.1'
+	    implementation 'com.github.LPirro:FlashAdapter:v0.0.1'
 	}
 
 # Usage
